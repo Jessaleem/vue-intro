@@ -14,11 +14,11 @@
     const vm = Vue.createApp({
       data() {
         return {
-          text: '<p>Hola Vue</p>',
+          attr: 'src',
+          img: 'https://images.ctfassets.net/5gvckmvm9289/2lDcBdT0QA49nsnZXHRfwv/11c24aff699978dda3016cd9d66956d9/1.jpg?w=640&q=60&bg=rgb:F7F1EC&fm=&fm=jpg&fl=progressive',
         };
       },
-      template: `<div v-html="text"></div>`,
+      template: `<img v-bind:[attr]="img" v-bind:alt="img" />`,
     }).mount('#app');
-    console.log(vm);
   </script>
 </html>
