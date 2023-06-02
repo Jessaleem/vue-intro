@@ -9,7 +9,7 @@
   <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </body>
-  <div id="app">{{ text}}</div>
+  <div id="app"></div>
   <script>
     const vm = Vue.createApp({
       data() {
@@ -17,6 +17,8 @@
           text: 'Hola Vue',
         };
       },
+      template: `<div v-text="text"></div>`,
     }).mount('#app');
+    console.log(vm);
   </script>
 </html>
